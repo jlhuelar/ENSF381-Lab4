@@ -17,8 +17,7 @@ Description : Responsive Layouts.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- First, link the menu.css file here -->
-	<a href="menu.css">Menu</a>
+	<link rel="stylesheet" href="menu.css">
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
@@ -46,54 +45,60 @@ Description : Responsive Layouts.
         .main { padding: 15px; margin-left: 150px;}		
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
+
 		
 		.row { 
-			/*I need some CSS codes.*/		
+				
 		}
 
 		.large, .medium, .small {
-			/*I need some CSS codes.*/
+			
 		}
 		
 		.gap {
-			margin-top: 30px; /* Increase space above the element */
-  			margin-bottom: 30px; /* Increase space below the element */
+			margin-top: 50px; 
+  			margin-bottom: 30px; 
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
-				width: 100%
+				width: 100%;
 			}
 			.medium { 
-				width: 70%
+				width: 70%;
+				float: left;
 			}
 			.small { 
-				width: 30%
+				width: 30%;
+				float: left;
 			}
 		}
 
         @media screen and (max-width: 768px) {
             .large { 
-				width: 100%
+				width: 100%;
 			}
 			.medium { 
-				width: 70%
+				width: 60%;
+				float: left;
 			}
 			.small { 
-				width: 30%
+				width: 40%;
+				float: left;
 			}
+			.menu li {
+            float: none;
+            display: block; /* This stacks the menu items vertically */
+        	}
         }
 
         @media screen and (max-width: 480px) {
-			.large { 
-				width: 100%
+			.large, .medium, .small {
+			width: 100%;
+			float: none;
 			}
-			.medium { 
-				width: 100%
-			}
-			.small { 
-				width: 100%
-			}
+
+			h1 { font-size: 18px; }
         }
 
         
