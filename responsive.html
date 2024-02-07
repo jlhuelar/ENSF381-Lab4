@@ -1,9 +1,9 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : responsive.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Jericho Huelar, Sean Sabo
+Submission  : Feburary 7, 2024
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,7 +18,7 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
-
+	<a href="menu.css">Menu</a>
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
@@ -56,27 +56,44 @@ Description : Responsive Layouts.
 		}
 		
 		.gap {
-			/*I need some CSS codes.*/
+			margin-top: 30px; /* Increase space above the element */
+  			margin-bottom: 30px; /* Increase space below the element */
 		}
 
 		@media screen and (min-width: 769px) {			
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100%
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%
 			}
 			.small { 
-				/*I need some CSS codes.*/
-			 }
+				width: 30%
+			}
 		}
 
         @media screen and (max-width: 768px) {
-            /*I need some CSS codes.*/
+            .large { 
+				width: 100%
+			}
+			.medium { 
+				width: 70%
+			}
+			.small { 
+				width: 30%
+			}
         }
 
         @media screen and (max-width: 480px) {
-			/*I need some CSS codes.*/
+			.large { 
+				width: 100%
+			}
+			.medium { 
+				width: 100%
+			}
+			.small { 
+				width: 100%
+			}
         }
 
         
