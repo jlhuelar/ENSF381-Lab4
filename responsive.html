@@ -26,27 +26,27 @@ Description : Responsive Layouts.
         .gap { margin-bottom: 20px; } /* Initial gap management */
 
 		@media screen and (min-width: 769px) {
-			.row { 
-				display: block; 
-				overflow: hidden; /* This ensures that the container (.row) encompasses its floated children */
-			}
-			.large { 
-				width: 100%; 
-				display: block; /* Ensure the large item takes the full width */
-			}
-			.medium { 
-				width: 70%; 
-				float: left; /* Float left to allow the small item to sit beside it */
-			}
-			.small { 
-				width: 30%; 
-				float: left; /* Float left to sit beside the medium item */
-			}
-			.gap { 
-				margin-bottom: 50px; /* Adjust gap for desktop */
-				clear: both; /* Clear the float to ensure the gap is always visible */
-			}
+		.row { 
+			display: block; 
+			overflow: hidden; /* This ensures that the container (.row) encompasses its floated children */
 		}
+		.large { 
+			width: 100%; 
+			display: block; /* Ensure the large item takes the full width */
+		}
+		.medium { 
+			width: 70%; 
+			float: left; /* Float left to allow the small item to sit beside it */
+		}
+		.small { 
+			width: 30%; 
+			float: left; /* Float left to sit beside the medium item */
+		}
+		.gap { 
+			margin-bottom: 50px; /* Adjust gap for desktop */
+			clear: both; /* Clear the float to ensure the gap is always visible */
+		}
+	}
 
         /* Tablets */
         @media screen and (max-width: 768px) and (min-width: 481px) {
