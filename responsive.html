@@ -15,55 +15,68 @@ Description : Responsive Layouts.
     <link rel="stylesheet" href="menu.css"> <!-- Link to the external CSS file for the menu -->
 
     <style>
-        /* Base styles */
-        body { margin: 0; padding: 0; }
-        img { max-width: 100%; height: auto; } /* Fluid images */
-        .container { width: 100%; }
-        .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }
-        .main { padding: 15px; margin-left: 150px; }
-        .footer { position: fixed; bottom: 0; width: 100%; }
-        .news-item { padding: 10px; }
-        .gap { margin-bottom: 20px; } /* Initial gap management */
-
+		/* Base styles */
+		body { margin: 0; padding: 0; }
+		img { max-width: 100%; height: auto; } /* Fluid images */
+		.container { width: 100%; }
+		.header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }
+		.main { padding: 15px; }
+		.footer { position: fixed; bottom: 0; width: 100%; }
+		.news-item { padding: 10px; }
+		.gap { margin-bottom: 20px; } /* Initial gap management */
+	
+		/* Desktops */
 		@media screen and (min-width: 769px) {
-		.row { 
-			display: block; 
-			overflow: hidden; /* This ensures that the container (.row) encompasses its floated children */
+			.row { 
+				display: block; 
+			}
+			.large { 
+				width: 100%; 
+			}
+			.medium { 
+				width: 70%; 
+				float: left; 
+			}
+			.small { 
+				width: 30%; 
+				float: left; 
+			}
+			.gap { 
+				margin-bottom: 50px; 
+				clear: both; 
+			}
 		}
-		.large { 
-			width: 100%; 
-			display: block; /* Ensure the large item takes the full width */
-		}
-		.medium { 
-			width: 70%; 
-			float: left; /* Float left to allow the small item to sit beside it */
-		}
-		.small { 
-			width: 30%; 
-			float: left; /* Float left to sit beside the medium item */
-		}
-		.gap { 
-			margin-bottom: 50px; /* Adjust gap for desktop */
-			clear: both; /* Clear the float to ensure the gap is always visible */
-		}
-	}
+	
+		/* Tablets */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .row, .large, .medium, .small { width: 100%; }
+    .medium { 
+        width: 60%; /* Adjusted for tablet */
+        float: left; /* Float left to allow the small item to sit beside it */
+    }
+    .small { 
+        width: 40%; /* Adjusted for tablet */
+        float: left; /* Float left to sit beside the medium item */
+    }
+    .main { margin-left: 0; }
+    .header, .menu { 
+        display: block; 
+        width: 100%; 
+    }
+    h1 { font-size: 22px; }
+}
 
-        /* Tablets */
-        @media screen and (max-width: 768px) and (min-width: 481px) {
-            .row, .large, .medium, .small { width: 100%; }
-            .main { margin-left: 0; } /* Use full width for main content */
-            .header, .menu { display: block; width: 100%; } /* Ensure menu and header are full width */
-            h1 { font-size: 22px; } /* Adjust font size for readability */
-        }
-
-        /* Mobile Phones */
-        @media screen and (max-width: 480px) {
-            .row, .large, .medium, .small { width: 100%; }
-            .main { margin-left: 0; } /* Remove margin for main content */
-            .header, .menu { display: block; } /* Stack header and menu */
-            h1 { font-size: 18px; } /* Further reduce font size for smaller screens */
-        }
-    </style>
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+    .row, .large, .medium, .small { width: 100%; }
+    .main { margin-left: 0; }
+    .header, .menu { 
+        display: block; 
+        width: 100%; 
+    }
+    h1 { font-size: 18px; } /* Adjust font size for mobile phones */
+}
+	</style>
 </head>
 <body>
     <div class="container">
@@ -143,3 +156,4 @@ Description : Responsive Layouts.
     </div>
 </body>
 </html>
+
